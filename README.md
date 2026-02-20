@@ -2,7 +2,8 @@
 
 > Instantly detect structural weak points in 3D CAD models using a 3D CNN — no heavy FEA simulations required.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/AI_3D_Tolerance_Stress_Validator/blob/main/AI_3D_Stress_Validator.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/janu3605/AI_3D_Tolerance_Stress_Validator/blob/main/AI_3D_Stress_Validator.ipynb)
+
 
 ---
 
