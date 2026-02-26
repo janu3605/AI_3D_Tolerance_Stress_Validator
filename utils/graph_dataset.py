@@ -90,16 +90,9 @@ class BracketGraphDataset(InMemoryDataset):
         # --- Load stress labels ---
         df = pd.read_csv(self.csv_path)
 
-        stress_cols = [
-            "max_ver_stress(MPa)",
-            "max_hor_stress(MPa)",
-            "max_dia_stress(MPa)",
-            "max_tor_stress(MPa)",
-        ]
-        # Fallback: find any stress columns
-        missing = [c for c in stress_cols if c not in df.columns]
-        if missing:
-            stress_cols = [c for c in df.columns if "stress" in c.lower()]
+        # Auto-discover ALL stress-related columns (not just 4 hardcoded ones)
+        # This captures every FEA load case present in the dataset
+        stress_cols = [c for c in df.columns if "stress" in c.lower()]
 
         df["max_stress_all"] = df[stress_cols].max(axis=1)
 
